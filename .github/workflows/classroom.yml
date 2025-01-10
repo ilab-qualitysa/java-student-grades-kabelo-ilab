@@ -18,8 +18,8 @@ jobs:
       uses: classroom-resources/autograding-command-grader@v1
       with:
         test-name: Greetings
-        setup-command: mvn compile
-        command: mvn -Dtest=StudentGradesTest#getGreetingsTest test
+        setup-command: javac *.java
+        command: java cpl . StudentGradesTest#getGreetings
         timeout: 3
         max-score: 10
     - name: Determine Grade
